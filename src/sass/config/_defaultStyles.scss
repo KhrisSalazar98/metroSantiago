@@ -1,3 +1,15 @@
 body {
     font-family: $family;
 }
+
+a {
+    text-decoration: none;
+}
+
+.color_principal {
+    color: $color_principal;
+}
+
+.bg_color_secundario {
+    background-color: $color_secundario;
+}
