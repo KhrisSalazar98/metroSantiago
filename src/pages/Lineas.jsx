@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { readLines } from '../redux/features/linea/lineaSlice';
 
+import { Link } from 'react-router-dom';
+
 import Helmet from '../components/Helmet';
 import Loading from '../components/Loading';
 
@@ -18,8 +20,7 @@ const Lineas = () => {
     useEffect(() => {
         dispatch(readLines()); 
     },[dispatch]);
-
-  
+    
     return (
         <Helmet title={"Líneas"}>
             <>
@@ -42,17 +43,18 @@ const Lineas = () => {
                                         <ul className='py-4 text-white'>
                                             {line.estaciones.map((estacion) => (
                                                 <li className='mb-2 li_station' key={estacion.id_estacion}>
-                                                    
-                                                    {estacion.nombreEstacion} {" "}
-                                                    {estacion.combinaciones && estacion.combinaciones.map((comb, index) => (
-                                                        <figure className={`d-inline combinacion ${comb.classCombinacion}`} key={index}>
-                                                            <span className='txt_xl'>comb.</span>{" "}
-                                                            <span className="rounded-circle line_symbol">{comb.nombreCombinacion2}</span>
-                                                        </figure>
+                                                    <Link to={`detalles_estacion/${line.id_linea}/${estacion.id_estacion}`}>
+                                                        {estacion.nombreEstacion} {" "}
+                                                        {estacion.combinaciones && estacion.combinaciones.map((comb, index) => (
+                                                            <figure className={`d-inline combinacion ${comb.classCombinacion}`} key={index}>
+                                                                <span className='txt_xl'>comb.</span>{" "}
+                                                                <span className="rounded-circle line_symbol">{comb.nombreCombinacion2}</span>
+                                                            </figure>
                                                         
                                                             
                                                         
-                                                    ))}
+                                                        ))}
+                                                    </Link>
                                                     
                                                     
                                                 </li>
@@ -81,7 +83,7 @@ const Lineas = () => {
                                                 <ul className='py-4 text-white'>
                                                     {line.estaciones.map((estacion) => (
                                                         <li className='mb-2 li_station' key={estacion.id_estacion}>
-                                                    
+                                                            
                                                             {estacion.nombreEstacion} {" "}
                                                             {estacion.combinaciones && estacion.combinaciones.map((comb, index) => (
                                                                 <figure className={`d-inline combinacion ${comb.classCombinacion}`} key={index}>
