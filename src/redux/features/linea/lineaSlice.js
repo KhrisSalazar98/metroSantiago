@@ -57,8 +57,6 @@ export const getStation = createAsyncThunk(
                 nombreLinea2: nombreLinea2
             }
 
-            // const result = estacionObtenida[0]
-
             return result;
 
         }catch(error) {

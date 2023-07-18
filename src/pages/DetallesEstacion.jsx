@@ -30,7 +30,7 @@ const DetallesEstacion = () => {
 
     }, [dispatch]);
 
-    console.log(stationFound);
+    // console.log(stationFound);
 
     return (
         <>
@@ -38,23 +38,16 @@ const DetallesEstacion = () => {
                 <Loading />
             ):
 
-                // stationFound !== null && (
-                //     <Helmet title={`Estación ${stationFound.estacion.nombreEstacion}`}>
-                //         <div className={`container mt-5 stationDetailsContainer`}>
-                //             <h2 className='py-4 rounded-3 text-center'>Estación {stationFound.estacion.nombreEstacion}</h2>
-                //         </div>
-                //     </Helmet>
-                // )
-
                 stationFound && (
-                    <div>
-                        detalles {stationFound.estacion.nombreEstacion} ({stationFound.nombreLinea2})
-                    </div>
+                    <Helmet title={`Estación ${stationFound.estacion.nombreEstacion}`}>
+                        <div className={`container mt-5 stationDetailsContainer ${stationFound.classLinea}`}>
+                            <h2 className='py-4 rounded-pill text-center text-white'>Estación {stationFound.estacion.nombreEstacion} ({stationFound.nombreLinea2})</h2>
+                        </div>
+                    </Helmet>
+                    
                 )
                 
-                
-                
-            
+                        
             }
         </>
     )
