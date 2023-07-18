@@ -25,10 +25,6 @@ const Footer = () => {
                                 </div>
 
                                 <div className='col-12 col-sm-12 col-lg-3 mb-3'>
-                                    <Link className='footer_item' to={"/estaciones"}>Estaciones</Link>
-                                </div>
-
-                                <div className='col-12 col-sm-12 col-lg-3 mb-3'>
                                     <Link className='footer_item' to={"/comunas"}>Comunas</Link>
                                 </div>
                             </div>

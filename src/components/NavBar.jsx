@@ -15,10 +15,6 @@ const nav__links = [
         display: 'Red Metro'
     },
     {
-        path: '/estaciones',
-        display: 'Estaciones'
-    },
-    {
         path: '/comunas',
         display: 'Comunas'
     },
