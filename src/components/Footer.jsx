@@ -1,7 +1,6 @@
 import React from 'react';
 import imgLogo from '../assets/img/metroSantiago2.png';
 
-
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -22,7 +21,7 @@ const Footer = () => {
                                 </div>
 
                                 <div className='col-12 col-sm-12 col-lg-3 mb-3'>
-                                    <Link className='footer_item' to={"/lineas"}>Líneas</Link>
+                                    <Link className='footer_item' to={"/redMetro"}>Red Metro</Link>
                                 </div>
 
                                 <div className='col-12 col-sm-12 col-lg-3 mb-3'>

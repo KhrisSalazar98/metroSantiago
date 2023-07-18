@@ -11,8 +11,8 @@ const nav__links = [
         display: 'Home'
     },
     {
-        path: '/lineas',
-        display: 'Líneas'
+        path: '/redMetro',
+        display: 'Red Metro'
     },
     {
         path: '/estaciones',

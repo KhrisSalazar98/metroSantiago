@@ -1,3 +1,20 @@
 @mixin transition_elements {
     transition: all 0.5s ease-out;
 }
+
+@mixin shadow_lines {
+    box-shadow: $sombra_btn;
+    -webkit-box-shadow: $sombra_btn; 
+}
+
+@mixin shadow_lines_hover($color) {
+    box-shadow: 0px 0px 15px -1px $color;
+    -webkit-box-shadow: 0px 0px 15px -1px $color;
+}
+
+@mixin marker_li_lines() {
+
+    li::marker{
+        font-size: 1.5rem;
+    }
+}

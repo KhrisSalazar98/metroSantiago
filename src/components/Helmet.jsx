@@ -4,7 +4,7 @@ const Helmet = (props) => {
     document.title = `Metro Santiago - ${props.title}`;
 
     return (
-        <div className='container-lg'>{props.children}</div>
+        <div className=''>{props.children}</div>
     )
 }
 

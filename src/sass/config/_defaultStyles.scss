@@ -6,6 +6,27 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    text-shadow: 0px 0px 2px $negro;
+}
+
+.accordion-button, .accordion-button:focus {
+    box-shadow: $sombra_btn !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-active-color);
+    background-color: transparent;
+}
+
+.accordion-button::after {
+    flex-shrink: none;
+    width: 0px;
+    height: 0px;
+    content: "";
+    background-image: none;
+}
+
 .color_principal {
     color: $color_principal;
 }

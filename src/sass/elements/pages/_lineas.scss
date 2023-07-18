@@ -1,0 +1,446 @@
+/* Líneas desktop */
+.linea_1 {
+
+    div {
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            background-color: $color_l1;
+            
+
+            h3, p {
+                text-shadow: 2px 2px 5px $negro;
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l1;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_1:hover {
+    div {
+        @include shadow_lines_hover($color_l1);
+    }
+}
+
+.linea_2 {
+
+    div {
+
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            background-color: $color_l2;
+        
+            h3, p {
+                text-shadow: 2px 2px 5px $negro;
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l2;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_2:hover {
+    div {
+        @include shadow_lines_hover($color_l2);
+    }
+}
+
+.linea_3 {
+
+    div {
+
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            background-color: $color_l3;
+            
+            h3, p {
+                text-shadow: 2px 2px 5px $negro;
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l3;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_3:hover {
+    div {
+        @include shadow_lines_hover($color_l3);
+    }
+}
+
+.linea_4 {
+
+    div {
+
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            background-color: $color_l4;
+            
+
+            h3, p {
+                text-shadow: 2px 2px 5px $negro; 
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l4;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_4:hover {
+    div {
+        @include shadow_lines_hover($color_l4);
+    }
+}
+
+.linea_4A {
+
+    div {
+
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            background-color: $color_l4A;
+            
+
+            h3, p {
+                text-shadow: 2px 2px 5px $negro;
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l4A;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_4A{
+    div:hover  {
+        @include shadow_lines_hover($color_l4A);
+    }
+}
+
+.linea_5 {
+
+    div {
+
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            background-color: $color_l5;
+        
+            h3, p {
+                text-shadow: 2px 2px 5px $negro;
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l5;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_5:hover {
+    div {
+        @include shadow_lines_hover($color_l5);
+    }
+}
+
+.linea_6 {
+
+    div {
+
+        @include transition_elements();
+        @include shadow_lines();
+
+        .line_title {
+            
+            background-color: $color_l6;
+            
+            h3, p {
+                text-shadow: 2px 2px 5px $negro;
+            }
+        }
+
+        background-color: $color_secundario;
+
+        ul {
+
+            @include marker_li_lines();
+
+            li {
+                color: $color_l6;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.desktop.linea_6:hover {
+    div {
+        @include shadow_lines_hover($color_l6);
+    }
+}
+
+/* Combinaciones Desktop */
+
+.combinacion {
+    
+    font-size: 14px;
+    
+    .line_symbol {
+        width: 10px;
+        height: 10px;
+        color: $blanco;
+        padding: 0.15rem 0.25rem 0.15rem 0.25rem;
+        box-shadow: 0px 0px 15px -6px $negro;
+        -webkit-box-shadow: 0px 0px 15px -6px $negro;
+    }
+}
+
+.combinacion.linea_1 {
+    .txt_xs, .txt_xl {
+        color: $color_l1;
+    }
+
+    .line_symbol {
+        background-color: $color_l1;
+    }
+}
+
+.combinacion.linea_2 {
+    .txt_xs, .txt_xl {
+        color: $color_l2;
+    }
+
+    .line_symbol {
+        background-color: $color_l2;
+    }
+}
+
+.combinacion.linea_3 {
+    .txt_xs, .txt_xl {
+        color: $color_l3;
+    }
+
+    .line_symbol {
+        background-color: $color_l3;
+    }
+}
+
+.combinacion.linea_4 {
+    .txt_xs, .txt_xl {
+        color: $color_l4;
+    }
+
+    .line_symbol {
+        background-color: $color_l4;
+    }
+}
+
+.combinacion.linea_4A {
+    .txt_xs, .txt_xl {
+        color: $color_l4A;
+    }
+
+    .line_symbol {
+        background-color: $color_l4A;
+    }
+}
+
+.combinacion.linea_5 {
+    .txt_xs, .txt_xl {
+        color: $color_l5;
+    }
+
+    .line_symbol {
+        background-color: $color_l5;
+    }
+}
+
+.combinacion.linea_6 {
+    .txt_xs, .txt_xl {
+        color: $color_l6;
+    }
+
+    .line_symbol {
+        background-color: $color_l6;
+    }
+}
+
+
+/* Líneas mobile */
+.accordion {
+    div {
+        h2 {
+
+            button {
+
+                -webkit-box-shadow: $sombra_btn;
+                box-shadow: $sombra_btn;
+                text-shadow: 2px 2px 5px $negro;
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_1 {
+        h2 {
+
+            button {
+                background-color: $color_l1;
+    
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_2 {
+        h2 {
+
+            button {
+                background-color: $color_l2;
+    
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_3 {
+        h2 {
+
+            button {
+                background-color: $color_l3;
+    
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_4 {
+        h2 {
+
+            button {
+                background-color: $color_l4;
+    
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_4A {
+        h2 {
+
+            button {
+                background-color: $color_l4A;
+    
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_5 {
+        h2 {
+
+            button {
+                background-color: $color_l5;
+    
+            }
+
+        }
+    }
+}
+
+.accordion {
+    .linea_6 {
+        h2 {
+
+            button {
+                background-color: $color_l6;
+    
+            }
+
+        }
+    }
+}
+
+
+
+
