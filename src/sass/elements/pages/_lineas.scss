@@ -18,11 +18,13 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l1);
 
             li {
-                color: $color_l1;
-                font-weight: 600;
+                a{
+                    color: $color_l1;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -53,11 +55,13 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l2);
 
             li {
-                color: $color_l2;
-                font-weight: 600;
+                a {
+                    color: $color_l2;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -88,11 +92,13 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l3);
 
             li {
-                color: $color_l3;
-                font-weight: 600;
+                a{
+                    color: $color_l3;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -124,11 +130,14 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l4);
 
             li {
-                color: $color_l4;
-                font-weight: 600;
+
+                a{
+                    color: $color_l4;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -160,11 +169,13 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l4A);
 
             li {
-                color: $color_l4A;
-                font-weight: 600;
+                a{
+                    color: $color_l4A;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -195,11 +206,13 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l5);
 
             li {
-                color: $color_l5;
-                font-weight: 600;
+                a{
+                    color: $color_l5;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -231,11 +244,14 @@
 
         ul {
 
-            @include marker_li_lines();
+            @include marker_li_lines($color_l6);
 
             li {
-                color: $color_l6;
-                font-weight: 600;
+
+                a{
+                    color: $color_l6;
+                    font-weight: 600;
+                }
             }
         }
     }

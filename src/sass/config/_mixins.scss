@@ -12,9 +12,10 @@
     -webkit-box-shadow: 0px 0px 15px -1px $color;
 }
 
-@mixin marker_li_lines() {
+@mixin marker_li_lines($color) {
 
     li::marker{
+        color: $color;
         font-size: 1.5rem;
     }
 }

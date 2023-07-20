@@ -83,18 +83,15 @@ const Lineas = () => {
                                                 <ul className='py-4 text-white'>
                                                     {line.estaciones.map((estacion) => (
                                                         <li className='mb-2 li_station' key={estacion.id_estacion}>
-                                                            
-                                                            {estacion.nombreEstacion} {" "}
-                                                            {estacion.combinaciones && estacion.combinaciones.map((comb, index) => (
-                                                                <figure className={`d-inline combinacion ${comb.classCombinacion}`} key={index}>
-                                                                    <span className='txt_xs'>combinación</span>{" "}
-                                                                    <span className="rounded-circle line_symbol">{comb.nombreCombinacion2}</span>
-                                                                </figure>
-                                                        
-                                                            
-                                                        
-                                                            ))}
-                                                    
+                                                            <Link to={`detalles_estacion/${line.id_linea}/${estacion.id_estacion}`}>
+                                                                {estacion.nombreEstacion} {" "}
+                                                                {estacion.combinaciones && estacion.combinaciones.map((comb, index) => (
+                                                                    <figure className={`d-inline combinacion ${comb.classCombinacion}`} key={index}>
+                                                                        <span className='txt_xs'>combinación</span>{" "}
+                                                                        <span className="rounded-circle line_symbol">{comb.nombreCombinacion2}</span>
+                                                                    </figure>
+                                                                ))}
+                                                            </Link>
                                                     
                                                         </li>
                                                     ))}
