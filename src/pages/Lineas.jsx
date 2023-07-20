@@ -5,8 +5,12 @@ import { readLines } from '../redux/features/linea/lineaSlice';
 
 import { Link } from 'react-router-dom';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+
 import Helmet from '../components/Helmet';
 import Loading from '../components/Loading';
+import Footer from '../components/Footer';
 
 
 
@@ -27,8 +31,9 @@ const Lineas = () => {
                 {loading ? (
                     <Loading />
                 ):
+                    <>
                     <div className='container mt-5'>
-                        <h2 className='text-center color_principal'><strong>Red Metro de Santiago</strong></h2>
+                        <h2 className='text-center color_principal'><strong><FontAwesomeIcon size="lg" icon={faNetworkWired} /> Red Metro de Santiago</strong></h2>
                         
                         {/* Listado de estaciones Desktop */}
                         <div className='d-none d-lg-flex mt-5 row'>
@@ -106,7 +111,12 @@ const Lineas = () => {
                             </div>
                         </div>
                     </div>
+
+                    <Footer />
+                    </>
                 }
+
+                
             </>
         </Helmet>
     )

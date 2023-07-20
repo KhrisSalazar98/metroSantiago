@@ -19,3 +19,32 @@
         font-size: 1.5rem;
     }
 }
+
+@mixin line_symbol_station($color){
+    background-color: $color;
+    color: $blanco;
+    padding: 0.2rem 0.4rem;
+    -webkit-box-shadow: $sombra_symbol;
+    box-shadow: $sombra_symbol;
+}
+
+@mixin line_symbol_comb($color){
+
+    color: $color;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    .color_combinacion {
+        background-color: $color;
+        color: $blanco;
+        padding: 0.2rem 0.4rem;
+        -webkit-box-shadow: $sombra_symbol;
+        box-shadow: $sombra_symbol; 
+    }
+    
+}
+
+@mixin carouselArrows_comunasImg($color) {
+    
+
+}

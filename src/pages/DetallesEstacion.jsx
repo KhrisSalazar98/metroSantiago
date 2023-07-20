@@ -4,10 +4,15 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { getStation} from '../redux/features/linea/lineaSlice';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faTrainSubway, faCity, faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+
 import Loading from '../components/Loading';
 import Helmet from '../components/Helmet';
 
 import { imgs } from '../assets/js/imagenesComunas';
+import Footer from '../components/Footer';
 
 const DetallesEstacion = () => {
 
@@ -32,7 +37,7 @@ const DetallesEstacion = () => {
 
     }, [dispatch]);
 
-    console.log(stationFound);
+    // console.log(stationFound);
 
     return (
         <>
@@ -43,15 +48,32 @@ const DetallesEstacion = () => {
                 stationFound && (
                     <Helmet title={`Estación ${stationFound.estacion.nombreEstacion}`}>
                         <div className="container mt-5">
-                            <h2 className={`py-4 rounded-pill text-center ${stationFound.classLinea}`}><strong>{stationFound.estacion.nombreEstacion} ({stationFound.nombreLinea2})</strong></h2>
+                            <h2 className={`py-4 text-center ${stationFound.classLinea}`}><strong>{stationFound.estacion.nombreEstacion} <span className={`rounded-circle ${stationFound.classLinea}`}>{stationFound.nombreLinea2}</span></strong></h2>
 
-                            <div className='mt-5 row justify-content-center'>
-                                <div className='col-12 col-sm-12 col-lg-6'>
-                                    <h3 className={`mb-5 text-center ${stationFound.classLinea}`}><strong>{stationFound.estacion.comunas.length === 1 ? "Comuna" : "Comunas"}</strong></h3>
-                                
-                                    <div className='mt-3 row justify-content-center'>
+                            <p className='mt-4 text-center'><span className={`${stationFound.classLinea}`}><strong><FontAwesomeIcon size="lg" icon={faLocationDot} /> Ubicación:</strong></span> {stationFound.estacion.ubicacion}</p>
+
+                            <div className={`mt-5 row justify-content-center`}>
+
+
+                                {/* Combinaciones */}
+                                <div className={`col-12 col-sm-12 col-lg-6 mb-5 ${stationFound.estacion.combinaciones.length >= 1 ? "" : "d-none"}`}>
+                                    <h3 className={`text-center mb-3 mb-lg-5 ${stationFound.classLinea}`}><strong><FontAwesomeIcon size="lg" icon={faTrainSubway} /> {stationFound.estacion.combinaciones.length > 1 ? "Combinaciones" : "Combinación"}</strong></h3>
+
+                                    <ul className='ul_combinations px-0'>
+                                        {stationFound.estacion.combinaciones.map((combinacion,index) =>(
+                                            <li className={`text-center ${combinacion.classCombinacion}`} key={index}>{combinacion.nombreCombinacion} <span className='rounded-circle color_combinacion'>{combinacion.nombreCombinacion2}</span></li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+
+                                {/* Comunas */}
+                                <div className='col-12 col-sm-12 col-lg-6 mb-5'>
+                                    <h3 className={`text-center mb-3 mb-lg-5 ${stationFound.classLinea}`}><strong><FontAwesomeIcon size="lg" icon={faCity} /> {stationFound.estacion.comunas.length === 1 ? "Comuna" : "Comunas"}</strong></h3>
+
+                                    <div className={`mt-3 row justify-content-center`}>
                                         {stationFound.estacion.comunas.map((comuna,index) => (
-                                            <div key={index} className='col-12 col-sm-12 col-md-6'>
+                                            <div key={index} className='col-12 col-sm-12 col-md-6 mb-3 mb-sm-5'>
                                                 <h4 className='text-center'>{comuna}</h4>
 
                                                 <div id={`carouselExampleAutoplaying_${index}`} className="carousel slide" data-bs-ride="carousel">
@@ -67,11 +89,11 @@ const DetallesEstacion = () => {
                                                         
                                                     </div>
                                                     <button className="carousel-control-prev" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="prev">
-                                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                        <FontAwesomeIcon className={`${stationFound.classLinea}`} size="xl" icon={faChevronLeft} />
                                                         <span className="visually-hidden">Previous</span>
                                                     </button>
-                                                    <button className="carousel-control-next" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="next">
-                                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <button className="carousel-control-next" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="next">    
+                                                        <FontAwesomeIcon className={`${stationFound.classLinea}`} size="xl" icon={faChevronRight} />
                                                         <span className="visually-hidden">Next</span>
                                                     </button>
                                                 </div>
@@ -82,17 +104,12 @@ const DetallesEstacion = () => {
                                     
                                     
                                 </div>
-                                <div className={`col-12 col-sm-12 col-lg-6 ${stationFound.estacion.combinaciones.length >= 1 ? "" : "d-none"}`}>
-                                    <h3 className={`text-center ${stationFound.classLinea}`}><strong>{stationFound.estacion.combinaciones.length > 1 ? "Combinaciones" : "Combinación"}</strong></h3>
 
-                                    <ul>
-                                        {stationFound.estacion.combinaciones.map((combinacion,index) =>(
-                                            <li key={index}>{combinacion.nombreCombinacion}</li>
-                                        ))}
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
+
+                        <Footer />
                     </Helmet>
                     
                 )
