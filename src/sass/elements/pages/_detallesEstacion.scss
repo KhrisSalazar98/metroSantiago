@@ -1,4 +1,8 @@
+ul.ul_combinations li::marker {
+    color: transparent;
+}
 
+//Estilos Línea 1
 h2.linea_1,h3.linea_1,span.linea_1 {
     color: $color_l1;
 }
@@ -14,7 +18,11 @@ li.linea_1 {
     @include line_symbol_comb($color_l1);
 }
 
+iframe.linea_1 {
+    border: solid 15px $color_l1;
+}
 
+//Estilos Línea 2
 h2.linea_2,h3.linea_2,span.linea_2 {
     color: $color_l2;
 }
@@ -31,6 +39,11 @@ li.linea_2 {
     
 }
 
+iframe.linea_2 {
+    border: solid 15px $color_l2;
+}
+
+//Estilos Línea 3
 h2.linea_3,h3.linea_3,span.linea_3 {
     color: $color_l3;
 }
@@ -45,6 +58,12 @@ li.linea_3 {
     @include line_symbol_comb($color_l3);
 }
 
+iframe.linea_3 {
+    border: solid 15px $color_l3;
+}
+
+
+//Estilos Línea 4
 h2.linea_4,h3.linea_4,span.linea_4 {
     color: $color_l4;
 }
@@ -59,6 +78,12 @@ li.linea_4 {
     @include line_symbol_comb($color_l4);
 }
 
+iframe.linea_4 {
+    border: solid 15px $color_l4;
+}
+
+
+//Estilos Línea 4A
 h2.linea_4A,h3.linea_4A,span.linea_4A {
     color: $color_l4A;
 }
@@ -73,6 +98,12 @@ li.linea_4A {
     @include line_symbol_comb($color_l4A);    
 }
 
+iframe.linea_4A {
+    border: solid 15px $color_l4A;
+}
+
+
+//Estilos Línea 5
 h2.linea_5,h3.linea_5,span.linea_5 {
     color: $color_l5;
 }
@@ -87,6 +118,12 @@ li.linea_5 {
     @include line_symbol_comb($color_l5);
 }
 
+iframe.linea_5 {
+    border: solid 15px $color_l5;
+}
+
+
+//Estilos Línea 6
 h2.linea_6,h3.linea_6,span.linea_6 {
     color: $color_l6;
 }
@@ -101,10 +138,13 @@ li.linea_6 {
     @include line_symbol_comb($color_l6);
 }
 
-ul.ul_combinations li::marker {
-    color: transparent;
+iframe.linea_6 {
+    border: solid 15px $color_l6;
 }
 
+
+
+// Carousel comunas
 .carousel-control-prev, .carousel-control-next {
     .linea_1 {
         color: $color_l1;

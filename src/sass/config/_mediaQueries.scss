@@ -92,6 +92,11 @@
         width: 160px;
         height: 160px;
     }
+
+    iframe {
+        width: 160px;
+        height: 200px;
+    }
 }
 
 @media (min-width: 222px) {
@@ -127,6 +132,11 @@
     .imgSlideDatailtsStation {
         width: 180px;
         height: 180px;
+    }
+
+    iframe {
+        width: 180px;
+        height: 200px;
     }
 
 }
@@ -201,6 +211,11 @@
         width: 200px;
         height: 200px;
     }
+
+    iframe {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media (min-width: 350px) {
@@ -223,6 +238,12 @@
     
     .estacionInicialFinal_txtMobile {
         font-size: 0.65rem;
+    }
+
+    /* Detalles Estación */
+    iframe {
+        width: 250px;
+        height: 200px;
     }
 }
 
@@ -259,15 +280,15 @@
     }
 
     /* Listado */
-    
-
     .estacionInicialFinal_txtMobile {
         font-size: 0.8rem;
     }
-}
 
-@media (min-width: 500px) {
-    
+    /* Detalles Estación */
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 
@@ -324,6 +345,12 @@
         span.linea_6 {
             font-size: 1.6rem;
         }
+    }
+
+    
+    iframe {
+        width: 400px;
+        height: 200px;
     }
 
 
@@ -397,6 +424,11 @@
         }
     }
 
+    iframe {
+        width: 500px;
+        height: 200px;
+    }
+
     
 }
 
@@ -424,6 +456,12 @@
         p {
             font-size: 1rem;
         }
+    }
+
+    /* Detalles Estación */
+    iframe {
+        width: 600px;
+        height: 300px;
     }
 }
 

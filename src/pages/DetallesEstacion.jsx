@@ -108,8 +108,18 @@ const DetallesEstacion = () => {
                                 
                             </div>
 
-                            {/* <iframe class="rounded-10-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6855.636729657611!2d-70.58557691024656!3d-33.417113965253954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf197038ee0b%3A0x703329a34c5d4e0d!2sDel%20Inca%204446%2C%20of%20501%2C%20Las%20Condes%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1649549918310!5m2!1ses-419!2scl" 
-                            style="width: 100%; height: auto;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                            {stationFound.estacion.mapa && (
+                                <div className='text-center'>
+                                    <iframe
+                                        className={`rounded-3 ${stationFound.classLinea}`}
+                                        src={stationFound.estacion.mapa}
+                                        allowFullScreen=""
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+
+                                    />
+                                </div>
+                            )}
                         </div>
 
                         <Footer />
