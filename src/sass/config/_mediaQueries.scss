@@ -42,6 +42,14 @@
     }
 
     /* Detalles Estación */
+    .lineSymbolMobile_container {
+        display: block;
+    }
+
+    .lineSymbolDesktop_container {
+        display: none;
+    }
+
     h2.linea_1 {
         span.linea_1 {
             font-size: 1rem;
@@ -82,10 +90,6 @@
         span.linea_6 {
             font-size: 1rem;
         }
-    }
-
-    .color_combinacion {
-        font-size: 1rem;
     }
 
     .imgSlideDatailtsStation {
@@ -202,11 +206,6 @@
         }
     }
 
-    .color_combinacion {
-        font-size: 1.2rem;
-    }
-
-    
     .imgSlideDatailtsStation {
         width: 200px;
         height: 200px;
@@ -215,6 +214,16 @@
     iframe {
         width: 200px;
         height: 200px;
+    }
+}
+
+@media (min-width: 300px) {
+    .lineSymbolMobile_container {
+        display: none;
+    }
+
+    .lineSymbolDesktop_container {
+        display: inline;
     }
 }
 

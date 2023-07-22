@@ -1,10 +1,15 @@
-ul.ul_combinations li::marker {
-    color: transparent;
+.detallesEstacion_combinacion {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 //Estilos Línea 1
-h2.linea_1,h3.linea_1,span.linea_1 {
+h2.linea_1,h3.linea_1,h4.linea_1,strong.linea_1 {
     color: $color_l1;
+}
+
+.detallesEstacion_lineSymbol.linea_1 {
+    @include line_symbol_station($color_l1);
 }
 
 h2.linea_1 {
@@ -13,9 +18,10 @@ h2.linea_1 {
     }
 }
 
-li.linea_1 {
-    
-    @include line_symbol_comb($color_l1);
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_1 {
+        @include line_symbol_comb($color_l1);
+    }
 }
 
 iframe.linea_1 {
@@ -23,8 +29,12 @@ iframe.linea_1 {
 }
 
 //Estilos Línea 2
-h2.linea_2,h3.linea_2,span.linea_2 {
+h2.linea_2,h3.linea_2,h4.linea_2,strong.linea_2 {
     color: $color_l2;
+}
+
+.detallesEstacion_lineSymbol.linea_2 {
+    @include line_symbol_station($color_l2);
 }
 
 h2.linea_2 {
@@ -33,10 +43,10 @@ h2.linea_2 {
     }
 }
 
-li.linea_2 {
-    
-    @include line_symbol_comb($color_l2);
-    
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_2 {
+        @include line_symbol_comb($color_l2);
+    }
 }
 
 iframe.linea_2 {
@@ -44,8 +54,12 @@ iframe.linea_2 {
 }
 
 //Estilos Línea 3
-h2.linea_3,h3.linea_3,span.linea_3 {
+h2.linea_3,h3.linea_3,h4.linea_3,strong.linea_3 {
     color: $color_l3;
+}
+
+.detallesEstacion_lineSymbol.linea_3 {
+    @include line_symbol_station($color_l3);
 }
 
 h2.linea_3 {
@@ -54,8 +68,10 @@ h2.linea_3 {
     }
 }
 
-li.linea_3 {
-    @include line_symbol_comb($color_l3);
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_3 {
+        @include line_symbol_comb($color_l3);
+    }
 }
 
 iframe.linea_3 {
@@ -64,8 +80,12 @@ iframe.linea_3 {
 
 
 //Estilos Línea 4
-h2.linea_4,h3.linea_4,span.linea_4 {
+h2.linea_4,h3.linea_4,h4.linea_4,strong.linea_4 {
     color: $color_l4;
+}
+
+.detallesEstacion_lineSymbol.linea_4 {
+    @include line_symbol_station($color_l4);
 }
 
 h2.linea_4 {
@@ -74,8 +94,10 @@ h2.linea_4 {
     }
 }
 
-li.linea_4 {
-    @include line_symbol_comb($color_l4);
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_4 {
+        @include line_symbol_comb($color_l4);
+    }
 }
 
 iframe.linea_4 {
@@ -84,8 +106,12 @@ iframe.linea_4 {
 
 
 //Estilos Línea 4A
-h2.linea_4A,h3.linea_4A,span.linea_4A {
+h2.linea_4A,h3.linea_4A,h4.linea_4A,strong.linea_4A {
     color: $color_l4A;
+}
+
+.detallesEstacion_lineSymbol.linea_4A {
+    @include line_symbol_station($color_l4A);
 }
 
 h2.linea_4A {
@@ -94,8 +120,10 @@ h2.linea_4A {
     }
 }
 
-li.linea_4A {
-    @include line_symbol_comb($color_l4A);    
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_4A {
+        @include line_symbol_comb($color_l4A);
+    }
 }
 
 iframe.linea_4A {
@@ -104,7 +132,7 @@ iframe.linea_4A {
 
 
 //Estilos Línea 5
-h2.linea_5,h3.linea_5,span.linea_5 {
+h2.linea_5,h3.linea_5,h4.linea_5,strong.linea_5 {
     color: $color_l5;
 }
 
@@ -114,8 +142,10 @@ h2.linea_5 {
     }
 }
 
-li.linea_5 {
-    @include line_symbol_comb($color_l5);
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_5 {
+        @include line_symbol_comb($color_l5);
+    }
 }
 
 iframe.linea_5 {
@@ -124,7 +154,7 @@ iframe.linea_5 {
 
 
 //Estilos Línea 6
-h2.linea_6,h3.linea_6,span.linea_6 {
+h2.linea_6,h3.linea_6,h4.linea_6,strong.linea_6 {
     color: $color_l6;
 }
 
@@ -134,8 +164,10 @@ h2.linea_6 {
     }
 }
 
-li.linea_6 {
-    @include line_symbol_comb($color_l6);
+.detallesEstacion_combinacion {
+    .combination_symbol.linea_6 {
+        @include line_symbol_comb($color_l6);
+    }
 }
 
 iframe.linea_6 {

@@ -31,17 +31,12 @@
 @mixin line_symbol_comb($color){
 
     color: $color;
-    font-size: 1.2rem;
-    font-weight: bold;
 
-    .color_combinacion {
-        background-color: $color;
+    span {
         color: $blanco;
-        padding: 0.2rem 0.4rem;
-        -webkit-box-shadow: $sombra_symbol;
-        box-shadow: $sombra_symbol; 
+        background-color: $color;
+        padding: 0.2rem 0.3rem;
     }
-    
 }
 
 @mixin carouselArrows_comunasImg($color) {
