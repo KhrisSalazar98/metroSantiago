@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getStation} from '../redux/features/linea/lineaSlice';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faTrainSubway, faCity, faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faCity, faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 import Loading from '../components/Loading';
 import Helmet from '../components/Helmet';

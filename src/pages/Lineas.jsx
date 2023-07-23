@@ -55,9 +55,6 @@ const Lineas = () => {
                                                                 <span className='txt_xl'>comb.</span>{" "}
                                                                 <span className="rounded-circle line_symbol">{comb.nombreCombinacion2}</span>
                                                             </figure>
-                                                        
-                                                            
-                                                        
                                                         ))}
                                                     </Link>
                                                     
