@@ -10,8 +10,9 @@ export const readComunas = createAsyncThunk(
         const comunasCollectionRef = collection(db, "sectores");
 
         try {
-            const result = await getDocs(comunasCollectionRef);
-            const listComunas = result.docs.map((doc) => ({
+
+            const resultComunas = await getDocs(comunasCollectionRef);
+            const listComunas = resultComunas.docs.map((doc) => ({
                 id: doc.id,
                 ...doc.data(),
             }));
@@ -27,7 +28,7 @@ export const readComunas = createAsyncThunk(
 export const comunaSlice = createSlice({
     name: "comuna",
     initialState: {
-        dataComunas: [],
+        data: {},
         comunaFound: null,
         loading: false,
         error: null
@@ -41,7 +42,7 @@ export const comunaSlice = createSlice({
         },
         [readComunas.fulfilled] : (state, action) => {
             state.loading= false;
-            state.dataComunas = action.payload;
+            state.data = action.payload;
         },
         [readComunas.rejected] : (state) => {
             state.loading = false;

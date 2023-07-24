@@ -18,13 +18,14 @@ const Comunas = () => {
 
     const dispatch = useDispatch();
 
-    const {dataComunas, loading} = useSelector((state) => state.comuna);
+    const {data, loading} = useSelector((state) => state.comuna);
 
     useEffect(() => {
-        dispatch(readComunas()); 
+        dispatch(readComunas());
     },[dispatch]);
 
-    // console.log(dataComunas);
+    // console.log(data.comunas);
+
     return (
 
         <Helmet title={"Comunas"}>
@@ -38,7 +39,7 @@ const Comunas = () => {
                             <h2 className='text-center color_principal'><strong><FontAwesomeIcon size="lg" icon={faCity} /> Comunas</strong></h2>
                             <div className="row mt-5">
 
-                                {dataComunas.comunas?.map((comuna,index) => (
+                                {data.comunas?.map((comuna,index) => (
                                     <div key={index} className='col-12 col-sm-6 col-md-4 mb-4 px-0'>
                                         <Link>
                                             <div className='m-3 py-4 rounded-3 bg_color_secundario comuna_container'>
@@ -49,7 +50,7 @@ const Comunas = () => {
                                                     </div>
 
                                                     <div className='col-12 col-sm-12 col-xl-6 mb-3'>
-                                                        <p className='text-center color_principal'><strong>N° de estaciones: <span className='text-black'>2</span></strong></p>
+                                                        <p className='text-center color_principal'><strong>N° de estaciones: <span className='text-black'>0</span></strong></p>
                                                     </div>
 
                                                     <div className='text-center'>
