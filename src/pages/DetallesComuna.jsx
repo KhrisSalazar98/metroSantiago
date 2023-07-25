@@ -1,13 +1,12 @@
 import React, {useEffect} from 'react';
 
-
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { getComuna } from '../redux/features/comuna/comunaSlice';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faCity, faChevronLeft, faChevronRight, faTrainSubway} from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faCity, faChevronLeft, faChevronRight, faTrainSubway, faCircleArrowLeft, faCircleArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 import Loading from '../components/Loading';
 import Helmet from '../components/Helmet';
@@ -25,6 +24,7 @@ const DetallesComuna = () => {
 
     const validarComuna = () => imgs.filter((c) => c.name === params.nombreComuna).length > 0;
 
+  
     useEffect(() => {
 
         if(validarComuna()){
@@ -160,6 +160,7 @@ const DetallesComuna = () => {
 
                         </div>
 
+                        
                         <Footer />
                     </Helmet>
                 ) 

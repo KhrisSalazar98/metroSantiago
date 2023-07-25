@@ -1,4 +1,15 @@
 @media (min-width: 200px) {
+    /* Loading */
+    .modalContainer {
+        width: 160px;
+        height: 150px;
+    }
+
+    .custom-loader {
+        width: 50px;
+        height: 50px;
+    }
+    
     /* Header */
     .logo {
         width: 130px;
@@ -241,6 +252,12 @@
 
 @media (min-width: 350px) {
 
+    /* Loading */
+    .modalContainer {
+        width: 250px;
+        height: 250px;
+    }
+
     /* Home */
     .txt_slide_home {
         h3 {
@@ -463,6 +480,22 @@
 }
 
 @media (min-width: 992px) {
+    
+    /* Loading */
+    .modalContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .custom-loader {
+        width:100px;
+        height:100px;
+    }
+
+    .txt_loading {
+        font-size: 20px;
+    }
+    
     /* Header */
     .logo {
         width: 130px;
@@ -496,6 +529,13 @@
 }
 
 @media (min-width: 1200px) {
+    
+    /* Loading */
+    .modalContainer {
+        width: 400px;
+        height: 400px;
+    }
+    
     /* lineas */
     .txt_xl {
         display: inline;
