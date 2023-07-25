@@ -50,7 +50,7 @@ const Comunas = () => {
                                                     </div>
 
                                                     <div className='col-12 col-sm-12 col-xl-6 mb-3'>
-                                                        <p className='text-center color_principal'><strong>N° de estaciones: <span className='text-black'>0</span></strong></p>
+                                                        <p className='text-center color_principal'><strong>N° de estaciones: <span className='text-black'>{comuna.estaciones.length}</span></strong></p>
                                                     </div>
 
                                                     <div className='text-center'>

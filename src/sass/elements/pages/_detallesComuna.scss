@@ -7,6 +7,12 @@
     background-color: $color_secundario;
     -webkit-box-shadow: $sombra_symbol;
     box-shadow: $sombra_symbol;
+
+    @include transition_elements();
+}
+
+.detallesComuna_estacionContainer:hover {
+    animation: sliceHover_animation 3s ease-out infinite;
 }
 
 a.L1 {

@@ -24,7 +24,7 @@ const Home = () => {
                 <br />
 
                 {/* slide 1 */}
-                <div className='mt-5 p-2 p-lg-4 rounded-3 mb-5 bg_color_secundario slide_home'>
+                <div className='mt-5 p-2 p-lg-4 rounded-3 mb-5 slide_home link'>
                     <Link to="/redMetro">
                         <div className="row">
                             <div className='col-12 col-sm-12 col-lg-5 mb-3'>
@@ -32,8 +32,8 @@ const Home = () => {
                             </div>
 
                             <div className='col-12 col-sm-12 col-lg-7 d-flex flex-column justify-content-center mb-3 txt_slide_home'>
-                                <h3 className='text-center color_principal'><strong><FontAwesomeIcon size="lg" icon={faNetworkWired} /> Conoce la red Metro de Santiago.</strong></h3>
-                                <p className='text-center'>La red de Metro está compuesta por diversas líneas de transporte.</p>
+                                <h3 className='text-center text-white'><strong><FontAwesomeIcon size="lg" icon={faNetworkWired} /> Conoce la red Metro de Santiago.</strong></h3>
+                                <p className='text-center'><strong>La red de Metro está compuesta por diversas líneas de transporte.</strong></p>
                             </div>
                         </div>
                     </Link>
@@ -41,7 +41,7 @@ const Home = () => {
                 </div>
 
                  {/* slide 2 */}
-                <div className='p-2 p-lg-4 rounded-3 mb-5 bg_color_secundario slide_home'>
+                <div className='p-2 p-lg-4 rounded-3 mb-5 slide_home'>
                     <div className="row">
 
                         <div className='col-12 col-sm-12 col-lg-5 mb-3 d-lg-none'>
@@ -61,7 +61,7 @@ const Home = () => {
 
 
                  {/* slide 3 */}
-                <div className='p-2 p-lg-4 rounded-3 mb-5 bg_color_secundario slide_home'>
+                <div className='p-2 p-lg-4 rounded-3 mb-5 slide_home link'>
                     <Link to="/comunas">
                         <div className="row">
                             <div className='col-12 col-sm-12 col-lg-5 mb-3'>
@@ -69,8 +69,8 @@ const Home = () => {
                             </div>
 
                             <div className='col-12 col-sm-12 col-lg-7 d-flex flex-column justify-content-center mb-3 txt_slide_home'>
-                                <h3 className='text-center color_principal'><strong><FontAwesomeIcon size="lg" icon={faCity} /> ¿En qué comunas opera este transporte público?</strong></h3>
-                                <p className='text-center'>Revisa cuáles son las comunas cubiertas por el servicio de transporte Metro de Santiago.</p>
+                                <h3 className='text-center text-white'><strong><FontAwesomeIcon size="lg" icon={faCity} /> ¿En qué comunas opera este transporte público?</strong></h3>
+                                <p className='text-center'><strong>Revisa cuáles son las comunas cubiertas por el servicio de transporte Metro de Santiago.</strong></p>
                             </div>
                         </div>
                     </Link>

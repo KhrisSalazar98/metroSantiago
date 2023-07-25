@@ -11,13 +11,17 @@ h1 {
 }
 
 .slide_home {
-    cursor: pointer;
     -webkit-box-shadow: $sombra_btn;
     box-shadow: $sombra_btn;
+    background-color: $color_secundario;
     @include transition_elements();
 }
 
-.slide_home:hover {
+.slide_home.link {
+    background-color: $color_principal;
+    cursor: pointer;
+}
+
+.slide_home.link:hover {
     animation: sliceHover_animation 3s ease-out infinite;
-    // background-color: red !important;
 }

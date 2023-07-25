@@ -34,13 +34,11 @@ const DetallesComuna = () => {
         if(!validarComuna()){
             navigate("/comunas");
         }
-        
+
     }, [dispatch]);
 
     // console.log(comunaFound);
-    // console.log(params);
-    // console.log(validarComuna());
-
+   
     return (
         <>
             {loading ? (
