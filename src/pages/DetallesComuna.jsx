@@ -110,21 +110,35 @@ const DetallesComuna = () => {
                                 <div className='my-4'>
                                     <h3 className='mb-4 text-center color_principal'><FontAwesomeIcon className='me-2' size="lg" icon={faTrainSubway} /> Estaciones</h3>
 
-                                    <ul>
-                                        {comunaFound.estaciones.map((estacion,index) => (
-                                            <li key={index}>
-                                                {estacion.nombreEstacion}
 
-                                                {estacion.lineas.map((l,index) => (
-                                                    <Link key={index} to={`/detalles_estacion/${l.id_linea}/${l.id_estacion}`}>
-                                                        <span className='ms-2'>{l.linea}</span>
-                                                    </Link>
-                                                    
-                                                ))} 
-                                                
-                                            </li>
+
+                                    <div className='row justify-content-center my-5'>
+                                        {comunaFound.estaciones.map((estacion,index) => (
+                                            <div className="col-12 col-sm-6 col-md-4 col-xl-3 mb-3 text-center " key={index}>
+                                                <div className='py-3 rounded-3 detallesComuna_estacionContainer'>
+                                                    <strong>{estacion.nombreEstacion}</strong>
+
+                                                    {estacion.lineas.map((l,index) => (
+                                                        <Link key={index} className={`d-none d-xxl-inline ${l.linea}`} to={`/detalles_estacion/${l.id_linea}/${l.id_estacion}`}>
+                                                            <span className='rounded-circle ms-2'>{l.linea}</span>
+                                                        </Link>
+    
+                                                    ))}
+
+                                                    <div className='mt-4 d-xxl-none'>
+                                                        {estacion.lineas.map((l,index) => (
+                                                            <Link key={index} className={`${l.linea}`} to={`/detalles_estacion/${l.id_linea}/${l.id_estacion}`}>
+                                                                <span className='rounded-circle ms-2'>{l.linea}</span>
+                                                            </Link>
+    
+                                                        ))}
+                                                    </div>
+                                                </div> 
+                                            </div>    
+                                            
                                         ))}
-                                    </ul>
+                                    </div>
+                                    
                                 </div>
 
                             )}
@@ -133,9 +147,9 @@ const DetallesComuna = () => {
                             {/* Ubicación de la comuna */}
                             {comunaFound.mapa && (
                                 <div className='text-center'>
-                                    <h3 className="text-center color_principal"><strong><FontAwesomeIcon size="xl" icon={faLocationDot} /> Ubicación:</strong></h3>
+                                    <h3 className="text-center color_principal"><FontAwesomeIcon size="xl" icon={faLocationDot} /> Ubicación:</h3>
                                     <iframe
-                                        className={`rounded-3`}
+                                        className={`rounded-3 iframe_comuna`}
                                         src={comunaFound.mapa}
                                         allowFullScreen=""
                                         loading="lazy"
@@ -143,13 +157,13 @@ const DetallesComuna = () => {
 
                                     />
                                 </div>
-                            )}                            
-                            
+                            )}
+
                         </div>
 
                         <Footer />
                     </Helmet>
-                )
+                ) 
             }
         </>
     )

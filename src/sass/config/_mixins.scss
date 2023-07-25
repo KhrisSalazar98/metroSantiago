@@ -39,7 +39,16 @@
     }
 }
 
-@mixin carouselArrows_comunasImg($color) {
-    
+@mixin line_symbol_detallesComuna($color) {
+    span {
+        color: $blanco;
+        background-color: $color;
+        font-weight: bold;
+        -webkit-box-shadow: $sombra_symbol;
+        box-shadow: $sombra_symbol;
+        padding: 0.4rem 0.5rem;
+    }
+
+    @include transition_elements();
 
 }

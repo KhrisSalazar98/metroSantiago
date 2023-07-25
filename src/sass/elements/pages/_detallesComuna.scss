@@ -1,3 +1,47 @@
 .detallesComuna {
     font-size: 1.2rem;
 }
+
+
+.detallesComuna_estacionContainer {
+    background-color: $color_secundario;
+    -webkit-box-shadow: $sombra_symbol;
+    box-shadow: $sombra_symbol;
+}
+
+a.L1 {
+    @include line_symbol_detallesComuna($color_l1);
+}
+
+a.L2 {
+    @include line_symbol_detallesComuna($color_l2);
+}
+
+a.L3 {
+    @include line_symbol_detallesComuna($color_l3);
+}
+
+a.L4 {
+    @include line_symbol_detallesComuna($color_l4);
+}
+
+a.L4A {
+    @include line_symbol_detallesComuna($color_l4A);
+}
+
+a.L5 {
+    @include line_symbol_detallesComuna($color_l5);
+}
+
+a.L6 {
+    @include line_symbol_detallesComuna($color_l6);
+}
+
+a.L1:hover,a.L2:hover,a.L3:hover,a.L4:hover,a.L4A:hover,a.L5:hover,a.L6:hover {
+    filter: brightness(150%);
+}
+
+.iframe_comuna {
+    -webkit-box-shadow: $sombra_symbol;
+    box-shadow: $sombra_symbol;
+}
