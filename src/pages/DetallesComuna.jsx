@@ -23,40 +23,41 @@ const DetallesComuna = () => {
     const dispatch = useDispatch();
     const {comunaFound, loading} = useSelector((state) => state.comuna);
 
-    // const validarComuna = () => parseInt(params.id_comuna) <= 0 || parseInt(params.id_comuna) >= 26 || isNaN(parseInt(params.id_comuna));
+    const validarComuna = () => imgs.filter((c) => c.name === params.nombreComuna).length > 0;
 
     useEffect(() => {
-        // if(validarComuna()) {
-        //     navigate("/comunas");
-        // }
+
+        if(validarComuna()){
+            dispatch(getComuna(params));
+        }
+    
+        if(!validarComuna()){
+            navigate("/comunas");
+        }
         
-        // if(!validarComuna()){
-        //     dispatch(getComuna(params));
-        // }
-
-        dispatch(getComuna(params));
-
     }, [dispatch]);
 
     // console.log(comunaFound);
+    // console.log(params);
+    // console.log(validarComuna());
 
     return (
         <>
             {loading ? (
                 <Loading />
             ):
-                comunaFound && (
-                    <Helmet title={`Comuna de ${comunaFound.nombreComuna}`}>
+                (comunaFound && comunaFound.comunaObtenida) && (
+                    <Helmet title={`Comuna de ${comunaFound.comunaObtenida.nombreComuna}`}>
                         <div className='container mt-5'>
                             
                             {/* Nombre de la comuna */}
-                            <h2 className='mt-5 text-center color_principal'><strong><FontAwesomeIcon className='me-2' size="lg" icon={faCity} />Comuna de "{comunaFound.nombreComuna}"</strong></h2>
+                            <h2 className='mt-5 text-center color_principal'><strong><FontAwesomeIcon className='me-2' size="lg" icon={faCity} />Comuna de "{comunaFound.comunaObtenida.nombreComuna}"</strong></h2>
 
 
                             {/* Sector de la comuna */}
                             <p className='mt-4 text-center color_principal detallesComuna'>
                                 <strong>
-                                    Sector: <span className='text-black'>{comunaFound.sectorComuna}</span>
+                                    Sector: <span className='text-black'>{comunaFound.comunaObtenida.sectorComuna}</span>
                                 </strong>
                             </p>
 
@@ -76,10 +77,10 @@ const DetallesComuna = () => {
                                                         <div className="carousel-inner">
         
                                                             <div className="carousel-item text-center active">
-                                                                <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comunaFound.nombreComuna)[0].img[1]} alt={comunaFound.nombreComuna} />
+                                                                <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comunaFound.comunaObtenida.nombreComuna)[0].img[1]} alt={comunaFound.nombreComuna} />
                                                             </div>
                                                             <div className="carousel-item text-center">
-                                                                <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comunaFound.nombreComuna)[0].img[0]} alt={comunaFound.nombreComuna} />
+                                                                <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comunaFound.comunaObtenida.nombreComuna)[0].img[0]} alt={comunaFound.nombreComuna} />
                                                             </div>
           
                                                         </div>
@@ -106,14 +107,14 @@ const DetallesComuna = () => {
 
 
                             {/* Estaciones situadas en la comuna */}
-                            {comunaFound.estaciones && (
+                            {comunaFound.comunaObtenida.estaciones && (
                                 <div className='my-4'>
                                     <h3 className='mb-4 text-center color_principal'><FontAwesomeIcon className='me-2' size="lg" icon={faTrainSubway} /> Estaciones</h3>
 
 
 
                                     <div className='row justify-content-center my-5'>
-                                        {comunaFound.estaciones.map((estacion,index) => (
+                                        {comunaFound.comunaObtenida.estaciones.map((estacion,index) => (
                                             <div className="col-12 col-sm-6 col-md-4 col-xl-3 mb-3 text-center " key={index}>
                                                 <div className='py-3 rounded-3 detallesComuna_estacionContainer'>
                                                     <strong>{estacion.nombreEstacion}</strong>
@@ -145,12 +146,12 @@ const DetallesComuna = () => {
 
 
                             {/* Ubicación de la comuna */}
-                            {comunaFound.mapa && (
+                            {comunaFound.comunaObtenida.mapa && (
                                 <div className='text-center'>
                                     <h3 className="text-center color_principal"><FontAwesomeIcon size="xl" icon={faLocationDot} /> Ubicación:</h3>
                                     <iframe
                                         className={`rounded-3 iframe_comuna`}
-                                        src={comunaFound.mapa}
+                                        src={comunaFound.comunaObtenida.mapa}
                                         allowFullScreen=""
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"

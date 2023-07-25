@@ -44,8 +44,9 @@ export const getComuna = createAsyncThunk(
 
             const comunaObtenida = await comunasProp.filter((comuna) => comuna.nombreComuna === c.nombreComuna);
             
-            // console.log(comunaObtenida[0]);
-            return comunaObtenida[0];
+            // console.log(comunasProp);
+            const jsonResult = {listadoComunas: comunasProp,comunaObtenida: comunaObtenida[0]}
+            return jsonResult;
 
         } catch(error) {
             return rejectWithValue(error);
