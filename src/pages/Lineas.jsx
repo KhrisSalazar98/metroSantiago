@@ -48,7 +48,8 @@ const Lineas = () => {
                                         <ul className='py-4 text-white'>
                                             {line.estaciones.map((estacion) => (
                                                 <li className='mb-2 li_station' key={estacion.id_estacion}>
-                                                    <Link to={`detalles_estacion/${line.id_linea}/${estacion.id_estacion}`}>
+                                                    <Link to={`/detalles_estacion/${line.id_linea}/${estacion.id_estacion}`}>
+                                                        {estacion.id_estacion} {" "}
                                                         {estacion.nombreEstacion} {" "}
                                                         {estacion.combinaciones && estacion.combinaciones.map((comb, index) => (
                                                             <figure className={`d-inline combinacion ${comb.classCombinacion}`} key={index}>

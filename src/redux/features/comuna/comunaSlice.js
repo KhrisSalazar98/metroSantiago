@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { db } from "../../../firebase/firebase-config";
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 
 //read comunas
 export const readComunas = createAsyncThunk(
@@ -23,7 +23,35 @@ export const readComunas = createAsyncThunk(
             return rejectWithValue(error);
         }
     }
-)
+);
+
+//get comuna
+export const getComuna = createAsyncThunk(
+    "getComuna",
+    async (c, {rejectWithValue}) => {
+
+        const comunasCollectionRef = collection(db, "sectores");
+
+        try {
+
+            const resultComunas = await getDocs(comunasCollectionRef);
+            const listComunas =  resultComunas.docs.map((doc) => ({
+                id: doc.id,
+                ...doc.data(),
+            }));
+
+            const comunasProp = await listComunas[0].comunas;
+
+            const comunaObtenida = await comunasProp.filter((comuna) => comuna.nombreComuna === c.nombreComuna);
+            
+            // console.log(comunaObtenida[0]);
+            return comunaObtenida[0];
+
+        } catch(error) {
+            return rejectWithValue(error);
+        }
+    }
+);
 
 export const comunaSlice = createSlice({
     name: "comuna",
@@ -45,6 +73,19 @@ export const comunaSlice = createSlice({
             state.data = action.payload;
         },
         [readComunas.rejected] : (state) => {
+            state.loading = false;
+            state.error = state.payload; 
+        },
+
+        //getComuna extrareducers
+        [getComuna.pending] : (state) => {
+            state.loading = true;
+        },
+        [getComuna.fulfilled] : (state, action) => {
+            state.loading= false;
+            state.comunaFound = action.payload;
+        },
+        [getComuna.rejected] : (state) => {
             state.loading = false;
             state.error = state.payload; 
         },

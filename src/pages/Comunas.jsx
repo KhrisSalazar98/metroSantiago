@@ -41,7 +41,7 @@ const Comunas = () => {
 
                                 {data.comunas?.map((comuna,index) => (
                                     <div key={index} className='col-12 col-sm-6 col-md-4 mb-4 px-0'>
-                                        <Link>
+                                        <Link to={`/detalles_comuna/${comuna.nombreComuna}`}>
                                             <div className='m-3 py-4 rounded-3 bg_color_secundario comuna_container'>
                                                 <h3 className='h3_comuna text-center color_principal'><strong>{comuna.nombreComuna}</strong></h3>
                                                 <div className="row mt-5">

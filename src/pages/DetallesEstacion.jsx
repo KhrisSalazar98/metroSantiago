@@ -53,16 +53,20 @@ const DetallesEstacion = () => {
                             </div>
                             <h2 className={`text-center pt-lg-5 ${stationFound.classLinea}`}><strong>  {stationFound.estacion.nombreEstacion} <span className={`rounded-circle lineSymbolDesktop_container ${stationFound.classLinea}`}>{stationFound.nombreLinea2}</span></strong></h2>
 
-                            <p className='mt-4 text-center detallesEstacion_combinacion'>
-                                <strong className={`${stationFound.classLinea}`}> 
-                                    {stationFound.estacion.combinaciones.length > 1 ? "Combinaciones" : "Combinación"}:
-                                </strong>
-                                <br className='lineSymbolMobile_container' />
-                                {stationFound.estacion.combinaciones.map((combinacion,index) =>(
-                                    <span className={`ms-1 combination_symbol ${combinacion.classCombinacion}`} key={index}>{combinacion.nombreCombinacion} <span className='rounded-circle'>{combinacion.nombreCombinacion2}</span></span> 
-                                ))}
+
+                            {stationFound.estacion.combinaciones.length >=1 && (
+                                <p className='mt-4 text-center detallesEstacion_combinacion'>
+                                    <strong className={`${stationFound.classLinea}`}> 
+                                        {stationFound.estacion.combinaciones.length > 1 ? "Combinaciones" : "Combinación"}:
+                                    </strong>
+                                    <br className='lineSymbolMobile_container' />
+                                    {stationFound.estacion.combinaciones.map((combinacion,index) =>(
+                                        <span className={`ms-1 combination_symbol ${combinacion.classCombinacion}`} key={index}>{combinacion.nombreCombinacion} <span className='rounded-circle'>{combinacion.nombreCombinacion2}</span></span> 
+                                    ))}
                                 
-                            </p>
+                                </p>
+                            )}
+                            
 
                             <div className={`mt-5 row justify-content-center`}>
 
@@ -73,28 +77,31 @@ const DetallesEstacion = () => {
                                     <div className={`mt-3 row justify-content-center`}>
                                         {stationFound.estacion.comunas.map((comuna,index) => (
                                             <div key={index} className='col-12 col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-5'>
-                                                <h4 className={`text-center ${stationFound.classLinea}`}><strong>{comuna}</strong></h4>
+                                                <Link to={`/detalles_comuna/${comuna}`}>
+                                                    <h4 className={`text-center ${stationFound.classLinea}`}><strong>{comuna}</strong></h4>
 
-                                                <div id={`carouselExampleAutoplaying_${index}`} className="carousel slide" data-bs-ride="carousel">
-                                                    <div className="carousel-inner">
-                                                        
-                                                        <div className="carousel-item text-center active">
-                                                            <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comuna)[0].img[1]} alt={comuna} />
+                                                    <div id={`carouselExampleAutoplaying_${index}`} className="carousel slide" data-bs-ride="carousel">
+                                                        <div className="carousel-inner">
+        
+                                                            <div className="carousel-item text-center active">
+                                                                <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comuna)[0].img[1]} alt={comuna} />
+                                                            </div>
+                                                            <div className="carousel-item text-center">
+                                                                <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comuna)[0].img[0]} alt={comuna} />
+                                                            </div>
+          
                                                         </div>
-                                                        <div className="carousel-item text-center">
-                                                            <img className={`rounded-2 imgSlideDatailtsStation`} src={imgs.filter((comunaImg) => comunaImg.name === comuna)[0].img[0]} alt={comuna} />
-                                                        </div>
-                                                          
+                                                        <button className="carousel-control-prev" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="prev">
+                                                            <FontAwesomeIcon className={`${stationFound.classLinea}`} size="xl" icon={faChevronLeft} />
+                                                            <span className="visually-hidden">Previous</span>
+                                                        </button>
+                                                        <button className="carousel-control-next" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="next">    
+                                                            <FontAwesomeIcon className={`${stationFound.classLinea}`} size="xl" icon={faChevronRight} />
+                                                            <span className="visually-hidden">Next</span>
+                                                        </button>
                                                     </div>
-                                                    <button className="carousel-control-prev" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="prev">
-                                                        <FontAwesomeIcon className={`${stationFound.classLinea}`} size="xl" icon={faChevronLeft} />
-                                                        <span className="visually-hidden">Previous</span>
-                                                    </button>
-                                                    <button className="carousel-control-next" type="button" data-bs-target={`#carouselExampleAutoplaying_${index}`} data-bs-slide="next">    
-                                                        <FontAwesomeIcon className={`${stationFound.classLinea}`} size="xl" icon={faChevronRight} />
-                                                        <span className="visually-hidden">Next</span>
-                                                    </button>
-                                                </div>
+                                                </Link>
+                                                
                                                 
                                             </div>
                                         ))}
