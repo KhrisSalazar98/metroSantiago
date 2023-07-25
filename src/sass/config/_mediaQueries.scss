@@ -1,0 +1,550 @@
+@media (min-width: 200px) {
+    /* Loading */
+    .modalContainer {
+        width: 160px;
+        height: 280px;
+    }
+
+    .custom-loader {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Header */
+    .logo {
+        width: 130px;
+        height: 120px;
+    }
+
+    .logo_mobile {
+        width: 70px;
+        height: 60px;
+    }
+
+    /* Home */
+    .txt_slide_home {
+
+        color: $negro;
+
+        h3 {
+            font-size: 0.7rem;
+        }
+
+        p {
+            font-size: 0.6rem;
+        }
+    }
+
+    /* Líneas */
+    .li_station {
+        font-size: 0.7rem;
+    }
+
+    .line_symbol {
+        font-size: 0.6rem;
+    }
+
+    .txt_xl, .txt_xs {
+        display: none;
+    }
+
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.45rem;
+    }
+
+    /* Detalles Estación */
+    .lineSymbolMobile_container {
+        display: block;
+    }
+
+    .lineSymbolDesktop_container {
+        display: none;
+    }
+
+    h2.linea_1 {
+        span.linea_1 {
+            font-size: 1rem;
+        }
+    }
+
+    h2.linea_2 {
+        span.linea_2 {
+            font-size: 1rem;
+        }
+    }
+
+    h2.linea_3 {
+        span.linea_3 {
+            font-size: 1rem;
+        }
+    }
+
+    h2.linea_4 {
+        span.linea_4 {
+            font-size: 1rem;
+        }
+    }
+
+    h2.linea_4A {
+        span.linea_4A {
+            font-size: 1rem;
+        }
+    }
+
+    h2.linea_5 {
+        span.linea_5 {
+            font-size: 1rem;
+        }
+    }
+
+    h2.linea_6 {
+        span.linea_6 {
+            font-size: 1rem;
+        }
+    }
+
+    .imgSlideDatailtsStation,.imgComuna {
+        width: 160px;
+        height: 160px;
+        -webkit-box-shadow: $sombra_symbol;
+        box-shadow: $sombra_symbol;
+    }
+
+    iframe {
+        width: 160px;
+        height: 200px;
+    }
+
+    /* comunas */
+    .h3_comuna {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 222px) {
+    
+    /* Listado */
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.5rem;
+    }
+
+    /* Detalles Estación */
+    .imgSlideDatailtsStation, .imgComuna {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+@media (min-width: 240px) {
+   
+    /* Líneas */
+    .li_station {
+        font-size: 0.8rem;
+    }
+
+    .line_symbol {
+        font-size: 0.7rem;
+    }
+
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.55rem;
+    }
+
+    /* Detalles Estación */
+    .imgSlideDatailtsStation,.imgComuna {
+        width: 180px;
+        height: 180px;
+    }
+
+    iframe {
+        width: 180px;
+        height: 200px;
+    }
+
+}
+
+
+@media (min-width: 280px) {
+    /* Home */
+    .txt_slide_home {
+        h3 {
+            font-size: 0.75rem;
+        }
+
+        p {
+            font-size: 0.65rem;
+        }
+    }
+    
+    /* Listado */
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.6rem;
+    }
+
+    /* Detalles Estación */
+    h2.linea_1 {
+        span.linea_1 {
+            font-size: 1.4rem;
+        }
+    }
+
+    h2.linea_2 {
+        span.linea_2 {
+            font-size: 1.4rem;
+        }
+    }
+
+    h2.linea_3 {
+        span.linea_3 {
+            font-size: 1.4rem;
+        }
+    }
+
+    h2.linea_4 {
+        span.linea_4 {
+            font-size: 1.4rem;
+        }
+    }
+
+    h2.linea_4A {
+        span.linea_4A {
+            font-size: 1.4rem;
+        }
+    }
+
+    h2.linea_5 {
+        span.linea_5 {
+            font-size: 1.4rem;
+        }
+    }
+
+    h2.linea_6 {
+        span.linea_6 {
+            font-size: 1.4rem;
+        }
+    }
+
+    .imgSlideDatailtsStation,.imgComuna {
+        width: 200px;
+        height: 200px;
+    }
+
+    iframe {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* comunas */
+    .h3_comuna {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 300px) {
+    .lineSymbolMobile_container {
+        display: none;
+    }
+
+    .lineSymbolDesktop_container {
+        display: inline;
+    }
+}
+
+@media (min-width: 350px) {
+
+    /* Loading */
+    .modalContainer {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Home */
+    .txt_slide_home {
+        h3 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+    }
+    
+    /* Listado */
+    .txt_xs {
+        display: inline;
+    }
+    
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.65rem;
+    }
+
+    /* Detalles Estación */
+    iframe {
+        width: 250px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 400px) {
+    /* Home */
+    .txt_slide_small {
+        font-size: 1rem;
+    }
+
+    /* Listado */
+    .li_station {
+        font-size: 1rem;
+    }
+
+    .line_symbol {
+        font-size: 0.9rem;
+    }
+
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 450px) {
+    /* Home */
+    .txt_slide_home {
+        h3 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+    }
+
+    /* Listado */
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.8rem;
+    }
+
+    /* Detalles Estación */
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    /* Home */
+    .txt_slide_home {
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Detalles Estación */
+    h2.linea_1 {
+        span.linea_1 {
+            font-size: 1.6rem;
+        }
+    }
+
+    h2.linea_2 {
+        span.linea_2 {
+            font-size: 1.6rem;
+        }
+    }
+
+    h2.linea_3 {
+        span.linea_3 {
+            font-size: 1.6rem;
+        }
+    }
+
+    h2.linea_4 {
+        span.linea_4 {
+            font-size: 1.6rem;
+        }
+    }
+
+    h2.linea_4A {
+        span.linea_4A {
+            font-size: 1.6rem;
+        }
+    }
+
+    h2.linea_5 {
+        span.linea_5 {
+            font-size: 1.6rem;
+        }
+    }
+
+    h2.linea_6 {
+        span.linea_6 {
+            font-size: 1.6rem;
+        }
+    }
+
+    
+    iframe {
+        width: 400px;
+        height: 200px;
+    }
+
+    /* comunas */
+    .h3_comuna {
+        font-size: 1.4rem;
+    }
+
+
+}
+
+@media (min-width: 768px) {
+    /* Home */
+    .txt_slide_home {
+        h3 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    /* Líneas */
+    .li_station {
+        font-size: 1rem;
+    }
+
+    .line_symbol {
+        font-size: 0.9rem;
+    }
+
+    .estacionInicialFinal_txtMobile {
+        font-size: 0.9rem;
+    }
+
+    /* Detalles Estación */
+    h2.linea_1 {
+        span.linea_1 {
+            font-size: 1.8rem;
+        }
+    }
+
+    h2.linea_2 {
+        span.linea_2 {
+            font-size: 1.8rem;
+        }
+    }
+
+    h2.linea_3 {
+        span.linea_3 {
+            font-size: 1.8rem;
+        }
+    }
+
+    h2.linea_4 {
+        span.linea_4 {
+            font-size: 1.8rem;
+        }
+    }
+
+    h2.linea_4A {
+        span.linea_4A {
+            font-size: 1.8rem;
+        }
+    }
+
+    h2.linea_5 {
+        span.linea_5 {
+            font-size: 1.8rem;
+        }
+    }
+
+    h2.linea_6 {
+        span.linea_6 {
+            font-size: 1.8rem;
+        }
+    }
+
+    iframe {
+        width: 500px;
+        height: 200px;
+    }
+
+    /* comunas */
+    .h3_comuna {
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    
+    /* Loading */
+    .modalContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .custom-loader {
+        width:100px;
+        height:100px;
+    }
+
+    .txt_loading {
+        font-size: 20px;
+    }
+    
+    /* Header */
+    .logo {
+        width: 130px;
+        height: 120px;
+    }
+
+    .nav-item a:hover {
+        border-bottom: solid 2px $blanco; 
+    }
+
+    .nav__active {
+        border-bottom: solid 2px $blanco !important;
+    }
+
+    /* Home */
+    .txt_slide_home {
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    /* Detalles Estación */
+    iframe {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    /* Loading */
+    .modalContainer {
+        width: 400px;
+        height: 400px;
+    }
+    
+    /* lineas */
+    .txt_xl {
+        display: none;
+    }
+}
+
+@media (min-width: 1400px) {
+    /* lineas */
+    .txt_xl {
+        display: inline;
+    }
+}

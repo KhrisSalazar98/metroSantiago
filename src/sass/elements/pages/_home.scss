@@ -1,0 +1,27 @@
+@keyframes sliceHover_animation {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-7px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(-7px); }
+    100% { transform: translateY(0); }
+}
+
+h1 {
+    text-shadow: 0px 0px 2px $negro;
+}
+
+.slide_home {
+    -webkit-box-shadow: $sombra_btn;
+    box-shadow: $sombra_btn;
+    background-color: $color_secundario;
+    @include transition_elements();
+}
+
+.slide_home.link {
+    background-color: $color_principal;
+    cursor: pointer;
+}
+
+.slide_home.link:hover {
+    animation: sliceHover_animation 3s ease-out infinite;
+}

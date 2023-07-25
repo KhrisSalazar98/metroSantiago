@@ -1,0 +1,14 @@
+footer {
+    background-color: $color_principal;
+    box-shadow: $sombra_footer;
+    -webkit-box-shadow: $sombra_footer;
+}
+
+.footer_item {
+    color: $blanco;
+    @include transition_elements();
+}
+
+.footer_item:hover {
+    font-weight: bold;
+}

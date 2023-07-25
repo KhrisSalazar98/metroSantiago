@@ -1,0 +1,10 @@
+
+.comuna_container {
+    @include transition_elements();
+    -webkit-box-shadow: $sombra_symbol;
+    box-shadow: $sombra_symbol;
+}
+
+.comuna_container:hover {
+    transform: scale(1.1);
+}

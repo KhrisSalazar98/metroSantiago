@@ -1,0 +1,22 @@
+header {
+    background-color: $color_principal;
+    box-shadow: $sombra_nav;
+    -webkit-box-shadow: $sombra_nav; 
+}
+
+.fa_bars, .fa_Xmark {
+    color: $blanco;
+}
+
+.nav-item a {
+    color: $blanco;
+    border-bottom: solid 2px transparent;
+    @include transition_elements();
+}
+
+.nav__active {
+    color: $blanco;
+    font-weight: bold;
+    
+}
+

@@ -1,4 +1,12 @@
 @import './config/variables';
 @import './config/mixins';
 @import './config/defaultStyles';
+@import './elements/components/loading';
+@import './elements/components/header';
+@import './elements/pages/home';
+@import './elements/pages/lineas';
+@import './elements/pages/detallesEstacion';
+@import './elements/pages/comunas';
+@import './elements/pages/detallesComuna';
+@import './elements/components/footer';
 @import './config/mediaQueries';
