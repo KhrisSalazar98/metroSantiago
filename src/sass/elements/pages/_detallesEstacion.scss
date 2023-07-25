@@ -25,7 +25,7 @@ h2.linea_1 {
 }
 
 iframe.linea_1 {
-    border: solid 15px $color_l1;
+    border: solid 8px $color_l1;
 }
 
 //Estilos Línea 2
@@ -50,7 +50,7 @@ h2.linea_2 {
 }
 
 iframe.linea_2 {
-    border: solid 15px $color_l2;
+    border: solid 8px $color_l2;
 }
 
 //Estilos Línea 3
@@ -75,7 +75,7 @@ h2.linea_3 {
 }
 
 iframe.linea_3 {
-    border: solid 15px $color_l3;
+    border: solid 8px $color_l3;
 }
 
 
@@ -101,7 +101,7 @@ h2.linea_4 {
 }
 
 iframe.linea_4 {
-    border: solid 15px $color_l4;
+    border: solid 8px $color_l4;
 }
 
 
@@ -127,13 +127,17 @@ h2.linea_4A {
 }
 
 iframe.linea_4A {
-    border: solid 15px $color_l4A;
+    border: solid 8px $color_l4A;
 }
 
 
 //Estilos Línea 5
 h2.linea_5,h3.linea_5,h4.linea_5,strong.linea_5 {
     color: $color_l5;
+}
+
+.detallesEstacion_lineSymbol.linea_5 {
+    @include line_symbol_station($color_l5);
 }
 
 h2.linea_5 {
@@ -149,13 +153,17 @@ h2.linea_5 {
 }
 
 iframe.linea_5 {
-    border: solid 15px $color_l5;
+    border: solid 8px $color_l5;
 }
 
 
 //Estilos Línea 6
 h2.linea_6,h3.linea_6,h4.linea_6,strong.linea_6 {
     color: $color_l6;
+}
+
+.detallesEstacion_lineSymbol.linea_6 {
+    @include line_symbol_station($color_l6);
 }
 
 h2.linea_6 {
@@ -171,7 +179,7 @@ h2.linea_6 {
 }
 
 iframe.linea_6 {
-    border: solid 15px $color_l6;
+    border: solid 8px $color_l6;
 }
 
 

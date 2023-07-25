@@ -44,7 +44,7 @@ const Comunas = () => {
                                         <Link to={`/detalles_comuna/${comuna.nombreComuna}`}>
                                             <div className='m-3 py-4 rounded-3 bg_color_secundario comuna_container'>
                                                 <h3 className='h3_comuna text-center color_principal'><strong>{comuna.nombreComuna}</strong></h3>
-                                                <div className="row mt-5">
+                                                <div className="row mt-3 mt-lg-5">
                                                     <div className='col-12 col-sm-12 col-xl-6 mb-3'>
                                                         <p className='text-center color_principal'><strong>Sector: <span className='text-black'>{comuna.sectorComuna}</span></strong></p>
                                                     </div>

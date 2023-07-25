@@ -49,7 +49,7 @@ const DetallesComuna = () => {
                         <div className='container mt-5'>
                             
                             {/* Nombre de la comuna */}
-                            <h2 className='mt-5 text-center color_principal'><strong><FontAwesomeIcon className='me-2' size="lg" icon={faCity} />Comuna de "{comunaFound.comunaObtenida.nombreComuna}"</strong></h2>
+                            <h2 className='mt-5 text-center color_principal'><strong><FontAwesomeIcon className='me-2 d-none d-sm-inline' size="lg" icon={faCity} />Comuna de <br className='d-sm-none'/>"{comunaFound.comunaObtenida.nombreComuna}"</strong></h2>
 
 
                             {/* Sector de la comuna */}
@@ -113,7 +113,7 @@ const DetallesComuna = () => {
 
                                     <div className='row justify-content-center my-5'>
                                         {comunaFound.comunaObtenida.estaciones.map((estacion,index) => (
-                                            <div className="col-12 col-sm-6 col-md-4 col-xl-3 mb-3 text-center " key={index}>
+                                            <div className="col-12 col-sm-6 col-md-4 col-xl-3 mb-3 text-center" key={index}>
                                                 <div className='py-3 rounded-3 detallesComuna_estacionContainer'>
                                                     <strong>{estacion.nombreEstacion}</strong>
 
@@ -124,7 +124,7 @@ const DetallesComuna = () => {
     
                                                     ))}
 
-                                                    <div className='mt-4 d-xxl-none'>
+                                                    <div className='mt-2 d-xxl-none'>
                                                         {estacion.lineas.map((l,index) => (
                                                             <Link key={index} className={`${l.linea}`} to={`/detalles_estacion/${l.id_linea}/${l.id_estacion}`}>
                                                                 <span className='rounded-circle ms-2'>{l.linea}</span>

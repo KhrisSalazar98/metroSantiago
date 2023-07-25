@@ -72,7 +72,7 @@ const DetallesEstacion = () => {
 
                                 {/* Comunas */}
                                 <div className='col-12 col-sm-12 col-lg-12 mb-5'>
-                                    <h3 className={`text-center mb-3 mb-lg-5 ${stationFound.classLinea}`}><strong><FontAwesomeIcon size="lg" icon={faCity} /> {stationFound.estacion.comunas.length === 1 ? "Comuna" : "Comunas"}</strong></h3>
+                                    <h3 className={`text-center mb-3 mb-lg-5 ${stationFound.classLinea}`}><strong><FontAwesomeIcon size="lg" icon={faCity} /> {stationFound.estacion.comunas.length === 1 ? "Comuna:" : "Comunas:"}</strong></h3>
 
                                     <div className={`mt-3 row justify-content-center`}>
                                         {stationFound.estacion.comunas.map((comuna,index) => (
@@ -117,7 +117,7 @@ const DetallesEstacion = () => {
                                 <div className='text-center'>
                                     <h3 className={`${stationFound.classLinea}`}><strong><FontAwesomeIcon size="xl" icon={faLocationDot} /> Ubicación:</strong></h3>
                                     <iframe
-                                        className={`rounded-3 ${stationFound.classLinea}`}
+                                        className={`rounded-3 iframe_estacion ${stationFound.classLinea}`}
                                         src={stationFound.estacion.mapa}
                                         allowFullScreen=""
                                         loading="lazy"

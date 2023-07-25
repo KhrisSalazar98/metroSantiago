@@ -33,7 +33,7 @@ const Home = () => {
 
                             <div className='col-12 col-sm-12 col-lg-7 d-flex flex-column justify-content-center mb-3 txt_slide_home'>
                                 <h3 className='text-center text-white'><strong><FontAwesomeIcon size="lg" icon={faNetworkWired} /> Conoce la red Metro de Santiago.</strong></h3>
-                                <p className='text-center'><strong>La red de Metro está compuesta por diversas líneas de transporte.</strong></p>
+                                <p className='text-center'><strong>La red Metro de Santiago está compuesta por diversas líneas de transporte, observa en qué consiste cada una.</strong></p>
                             </div>
                         </div>
                     </Link>

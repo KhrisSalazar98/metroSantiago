@@ -2,7 +2,7 @@
     /* Loading */
     .modalContainer {
         width: 160px;
-        height: 150px;
+        height: 280px;
     }
 
     .custom-loader {
@@ -536,6 +536,13 @@
         height: 400px;
     }
     
+    /* lineas */
+    .txt_xl {
+        display: none;
+    }
+}
+
+@media (min-width: 1400px) {
     /* lineas */
     .txt_xl {
         display: inline;
